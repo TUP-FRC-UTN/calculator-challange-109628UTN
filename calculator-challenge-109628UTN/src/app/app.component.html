@@ -1,0 +1,21 @@
+<div>
+  <h1>Calculadora</h1>
+  <div>
+    <label>Valor 1</label>
+    <input [(ngModel)]="value1" placeholder="Ingrese el primer valor" />
+  </div>
+  <div>
+    <label>Valor 2</label>
+    <input [(ngModel)]="value2" placeholder="Ingrese el segundo valor" />
+  </div>
+  <div>
+    <label>Resultado</label>
+    <input [value]="result" disabled />
+  </div>
+
+  <app-calculator
+    [value1]="value1"
+    [value2]="value2"
+    (result)="handleResult($event)">
+  </app-calculator>
+</div>
